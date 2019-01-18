@@ -60,6 +60,18 @@ class App extends Component {
     console.log('App.js - componentWillUpdate', nextProps, nextState);
   }
 
+  static getDerivedStateFromProps(nextProps, prevState) {
+    console.log('App.js - getDerivedStateFromProps', nextProps, prevState);
+
+    return prevState;
+  }
+
+  getSnapshotBeforeUpdate() {
+    console.log('App.js - getSnapshotBeforeUpdate');
+
+    return null;
+  }
+
   componentDidUpdate() {
     console.log('App.js - componentDidUpdate');
   }
